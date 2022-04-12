@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using System.Collections.Generic;
+
 namespace PalindromeExercise
 {
     public class WordSmith
@@ -10,8 +10,6 @@ namespace PalindromeExercise
         }
 
         public bool IsAPalindrome(string str)
-        {
-            return str.SequenceEqual(str.Reverse());
-        }
+            => str.Replace(" ", "").ToLower().SequenceEqual(str.Replace(" ", "").ToLower().Reverse());
     }
 }
